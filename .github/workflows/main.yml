@@ -1,0 +1,15 @@
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: PrimeroJob
+    steps:
+    - uses: actions/checkout@v2
+    - name: Executando o STEP1
+      run:
+        echo tô na branch devs
