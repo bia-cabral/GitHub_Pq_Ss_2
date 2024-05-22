@@ -22,7 +22,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: Build with Ant
-      run: javac src/Main.java -d ou
+      run: javac src/Main.java -d out
     - name: Rodando programa
       run: java -cp out Main
     - name: Ambiente
