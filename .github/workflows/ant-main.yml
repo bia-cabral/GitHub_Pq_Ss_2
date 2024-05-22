@@ -21,5 +21,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Build with Ant
+      run: javac src/Main.java -d ou
+    - name: Rodando programa
+      run: java -cp out Main
     - name: Ambiente
       run: echo Usando a Branch MAIN!
