@@ -5,9 +5,9 @@ name: Java CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "qa" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "qa" ]
 
 jobs:
   build:
@@ -26,4 +26,4 @@ jobs:
     - name: Rodando programa
       run: java -cp out Main
     - name: Ambiente
-      run: echo Usando a Branch MAIN!
+      run: echo Usando a Branch QA!
