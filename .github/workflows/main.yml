@@ -1,9 +1,9 @@
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "qa" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "qa" ]
+    branches: [ "main" ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,4 +12,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Executando o STEP1
       run:
-        echo Usando a Branch de Qa!
+        echo Usando a Branch de MAIN!
