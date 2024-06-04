@@ -33,13 +33,13 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v6.4
       with:
         # Name of the Docker image
-        image: java/pipes
+        image: beatrizcabral/pipes
         # Tags override for Docker image
-        tags: v1, latest
+        tags: 1.0
         # Target Docker registry
-        registry: registry-url.io
+        registry: docker.io
         # Location of Dockerfile, if not Dockerfile in root directory
-        dockerfile: Dockerfile.ci
+        dockerfile: dockerfile
         # Directory to run `docker build` from, if not project root
         username: ${{secrets.DOCKER_USERNAME}}
         # Docker registry password
