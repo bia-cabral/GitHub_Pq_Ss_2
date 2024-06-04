@@ -35,7 +35,7 @@ jobs:
         # Name of the Docker image
         image: beatrizcabral/java
         # Tags override for Docker image
-        tags: 1.0
+        tags: ${{steps.version.output.prefix}}
         # Target Docker registry
         registry: docker.io
         # Location of Dockerfile, if not Dockerfile in root directory
@@ -45,6 +45,7 @@ jobs:
         # Docker registry password
         password: ${{secrets.DOCKER_PASSWORD}}
     - name: Git Version
+      id: step_version
     # You may pin to the exact commit or the version.
     # uses: codacy/git-version@fa06788276d7492a2af01662649696d249ecf4cb
       uses: codacy/git-version@2.4.0
@@ -53,4 +54,6 @@ jobs:
         release-branch: main
         # The name of the dev branch
         dev-branch: dev
+        # The prefix to use in the version
+        prefix: version
           
